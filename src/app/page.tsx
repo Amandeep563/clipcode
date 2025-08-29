@@ -1,10 +1,20 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { getSession } from "@/lib/auth";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+const LandingPage = async () => {
+  const session = await getSession();
+
+  if (session) redirect("/home");
   return (
-    <div>
-      Welcome to ClipCode!!!!
-    
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1>This is Landing Page</h1>
+      <Link href="/login">
+        <Button>Login</Button>
+      </Link>
     </div>
   );
-}
+};
+
+export default LandingPage;
