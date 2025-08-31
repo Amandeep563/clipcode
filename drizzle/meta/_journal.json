@@ -8,6 +8,13 @@
       "when": 1756462462409,
       "tag": "0000_sudden_wind_dancer",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1756648323113,
+      "tag": "0001_brave_power_pack",
+      "breakpoints": true
     }
   ]
 }
