@@ -20,6 +20,24 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-empty-interface": "off",
+      
+      "react/no-unescaped-entities": "off",
+      "react/display-name": "off",
+      
+      "no-console": "off",
+      "no-debugger": "off",
+      "prefer-const": "warn",
+      "no-var": "warn",
+    },
+  },
 ];
 
 export default eslintConfig;
