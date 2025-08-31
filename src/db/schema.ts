@@ -1,4 +1,10 @@
-import { boolean, pgTable, timestamp, text } from "drizzle-orm/pg-core";
+import {
+  boolean,
+  pgTable,
+  timestamp,
+  text,
+  varchar,
+} from "drizzle-orm/pg-core";
 
 export const user = pgTable("user", {
   id: text("id").primaryKey(),
@@ -48,4 +54,12 @@ export const verification = pgTable("verification", {
   expiresAt: timestamp("expires_at").notNull(),
   createdAt: timestamp("created_at"),
   updatedAt: timestamp("updated_at"),
+});
+
+export const snippets = pgTable("snippet", {
+  id: text("id").primaryKey(),
+  title: varchar("title", { length: 255 }).notNull(),
+  code: text("code").notNull(),
+  language: text("language").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 });
