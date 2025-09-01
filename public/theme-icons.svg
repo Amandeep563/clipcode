@@ -1,0 +1,32 @@
+<svg width="0" height="0" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Light theme icon -->
+    <symbol id="light-theme" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="4" fill="currentColor"/>
+      <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="4"/>
+        <line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4" y1="12" x2="6" y2="12"/>
+        <line x1="18" y1="12" x2="20" y2="12"/>
+        <line x1="6.34" y1="6.34" x2="7.76" y2="7.76"/>
+        <line x1="16.24" y1="16.24" x2="17.66" y2="17.66"/>
+        <line x1="6.34" y1="17.66" x2="7.76" y2="16.24"/>
+        <line x1="16.24" y1="7.76" x2="17.66" y2="6.34"/>
+      </g>
+    </symbol>
+    
+    <!-- Dark theme icon -->
+    <symbol id="dark-theme" viewBox="0 0 24 24" fill="none">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    </symbol>
+    
+    <!-- System theme icon -->
+    <symbol id="system-theme" viewBox="0 0 24 24" fill="none">
+      <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <rect x="7" y="17" width="10" height="4" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <circle cx="12" cy="9" r="2" fill="currentColor" opacity="0.6"/>
+      <path d="M8 9h8M8 12h6M8 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    </symbol>
+  </defs>
+</svg>
