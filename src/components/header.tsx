@@ -6,6 +6,8 @@ import { ThemeButton } from "./theme-button";
 import { LogOut } from "lucide-react";
 import { AuthenticatedHeader } from "./authenticated-header";
 import { User } from "@/types/auth";
+import { LoginModal } from "./auth/login-modal";
+import { useState } from "react";
 
 interface HeaderProps {
     isLoggedIn?: boolean;
@@ -13,6 +15,7 @@ interface HeaderProps {
 }
 
 export function Header({ isLoggedIn = false, user }: HeaderProps) {
+    const [open, setOpen] = useState(false)
 
     if (isLoggedIn && user) {
         return <AuthenticatedHeader user={user} />;
@@ -20,6 +23,7 @@ export function Header({ isLoggedIn = false, user }: HeaderProps) {
 
     return (
         <header className="w-full">
+            <LoginModal open={open} onOpenChange={setOpen} />
             <div className="max-w-6xl container mx-auto px-4 py-4 flex justify-between items-center">
 
                 <Link href="/" className="flex items-center gap-2 group">
@@ -41,13 +45,13 @@ export function Header({ isLoggedIn = false, user }: HeaderProps) {
                         <span className="group-hover:opacity-100 opacity-0 duration-300">/</span>snippets
                     </Link>
 
-                    <Link
-                        href="/login"
+                    <button
+                        onClick={() => setOpen(true)}
                         className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-muted/60 transition-colors duration-200 border border-border/50 hover:border-border"
                     >
                         <LogOut className="h-4 w-4" />
                         <span className="text-sm font-medium">Login</span>
-                    </Link>
+                    </button>
 
                     <ThemeButton />
                 </div>
